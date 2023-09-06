@@ -4,11 +4,11 @@ import useProductStore from '../../store'
 
 const ShowProducts = () => {
     const { data } = useProductStore();
+    console.log("products data:", data);
 
-    console.log(data);
     return (
         <div>
-            {Object.keys(data).length !== 0 && data.map((product, index) => (
+            {/* {data.map((product, index) => (
                 <div className='bg-red-500' key={index}>
                     <img src={product.image} alt={product.title} width={50} />
                     <p>{product.title}</p>
@@ -16,7 +16,7 @@ const ShowProducts = () => {
                     <button>Add to Cart</button>
                     <div />
                 </div>
-            ))}
+            ))} */}
         </div>
     );
 };

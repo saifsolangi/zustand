@@ -4,7 +4,7 @@ import useProductStore from '../../store';
 import ShowProducts from './ShowProducts';
 
 const ProductContainer = () => {
-    const { data, setData } = useProductStore();
+    const { setData } = useProductStore();
 
     const apiUrl = 'https://fakestoreapi.com/products';
 
@@ -19,7 +19,7 @@ const ProductContainer = () => {
                 console.error('Error:', error);
             });
 
-    }, [apiUrl]); // Remove `data` from the dependency array
+    }, []);
 
 
     return (

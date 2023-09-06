@@ -13,12 +13,13 @@ const useWeatherStore = create((set) => ({
     setError: (newError) => set({ error: newError }),
 }));
 
-const useProductStore = create((set) => ({
-    data: [], // Initialize as an empty array
-    setData: (newData) => set({ data: newData }),
-}));
+const useProductStore = create((set) =>
+(
+    {
+        data: [],
+        setData: (newData) => set({ data: newData }),
+    }
 
-
-
+));
 
 export default useWeatherStore;
